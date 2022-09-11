@@ -1,8 +1,11 @@
 import React from 'react';
 import { Button, Grid, Paper, Table, TableBody, TableCell, TableContainer, TableHead, TableRow } from '@mui/material';
 import { Link } from 'react-router-dom';
+import productsAtom from '../atoms/productsAtom';
+import { useRecoilState } from 'recoil';
 
-export const Products = ({ products }) => {
+export const Products = () => {
+    const [products] = useRecoilState(productsAtom);
     return (
         <Grid container flexDirection={'column'} p='50px'>
             <Grid item>

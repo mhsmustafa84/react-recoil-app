@@ -1,9 +1,12 @@
 import React, { useState } from 'react';
 import { Button, Grid, TextField } from '@mui/material';
 import { useNavigate } from 'react-router-dom';
+import productsAtom from '../atoms/productsAtom';
+import { useRecoilState } from 'recoil';
 
-export const AddProducts = ({ setProducts }) => {
+export const AddProducts = () => {
     const navigate = useNavigate();
+    const [, setProducts] = useRecoilState(productsAtom);
     const [state, setState] = useState({ name: '', price: '' });
 
     const getValue = ({ target }) => {
