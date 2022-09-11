@@ -9,7 +9,7 @@ function App() {
     return (
         <BrowserRouter>
             <Routes>
-                <Route path='/' element={<Outlet />}>
+                <Route path='/react-recoil-app' element={<Outlet />}>
                     <Route path='/' element={<Products products={products} />} />
                     <Route path='/add' element={<AddProducts setProducts={setProducts} />} />
                 </Route>
