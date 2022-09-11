@@ -11,6 +11,7 @@ export const AddProducts = ({ setProducts }) => {
     };
 
     const onClickSave = () => {
+        if (!state.name || !state.price) return;
         setProducts(prevState => [...prevState, state]);
         navigate('/');
     };

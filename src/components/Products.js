@@ -7,7 +7,7 @@ export const Products = ({ products }) => {
         <Grid container flexDirection={'column'} p='50px'>
             <Grid item>
                 <Button variant='outlined' color='success'>
-                    <Link to='/add'>Add New Product</Link>
+                    <Link to='add'>Add New Product</Link>
                 </Button>
             </Grid>
             <Grid item>
